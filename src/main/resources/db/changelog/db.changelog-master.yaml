@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changesets/01-create-enums.sql
+  - include:
+      file: db/changelog/changesets/02-create-users-table.sql
+  - include:
+      file: db/changelog/changesets/03-create-hotels-table.sql
+  - include:
+      file: db/changelog/changesets/04-create-rooms-table.sql
+  - include:
+      file: db/changelog/changesets/05-create-bookings-table.sql
+  - include:
+      file: db/changelog/changesets/06-create-reviews-table.sql
+  - include:
+      file: db/changelog/changesets/07-add-indexes.sql
+  - include:
+      file: db/changelog/changesets/08-insert-test-data.sql
+      context: dev

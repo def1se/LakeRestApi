@@ -3,6 +3,7 @@ package ru.ashitok.lake.models;
 import jakarta.persistence.*;
 import ru.ashitok.lake.models.enums.Type;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -20,7 +21,7 @@ public class Room {
     private Type type;
 
     @Column(name = "price")
-    private Double price;
+    private BigDecimal price;
 
     @Column(name = "is_available")
     private Boolean isAvailable;
@@ -53,11 +54,11 @@ public class Room {
         this.type = type;
     }
 
-    public Double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 

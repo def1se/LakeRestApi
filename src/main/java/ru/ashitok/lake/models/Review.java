@@ -2,6 +2,7 @@ package ru.ashitok.lake.models;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -17,7 +18,7 @@ public class Review {
     private String text;
 
     @Column(name = "rating")
-    private Double rating;
+    private BigDecimal rating;
 
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
@@ -48,11 +49,11 @@ public class Review {
         this.text = text;
     }
 
-    public Double getRating() {
+    public BigDecimal getRating() {
         return rating;
     }
 
-    public void setRating(Double rating) {
+    public void setRating(BigDecimal rating) {
         this.rating = rating;
     }
 
